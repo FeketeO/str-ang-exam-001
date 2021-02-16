@@ -14,7 +14,44 @@ export interface ITableHeroes {
 })
 export class HeroService {
 
-  heroesUrl: string = "http://localhost:3000/heroes";
+   hero: Hero[] = [
+
+      {
+        "id": 1,
+        "name": "Infinity",
+        "superpower": "timetravel",
+        "address": "Kazakhstan"
+      },
+      {
+        "id": 2,
+        "name": "SWeathera",
+        "superpower": "changes the weather",
+        "address": "Russia"
+      },
+      {
+        "id": 3,
+        "name": "Green Leaf",
+        "superpower": "sends order to all plants",
+        "address": "Peru"
+      },
+      {
+        "id": 4,
+        "name": "Aqua",
+        "superpower": "sends order to all kind of water",
+        "address": "New Zealand"
+      },
+      {
+        "id": 5,
+        "name": "Mistral",
+        "superpower": "Orders the windr",
+        "address": "Iceland"
+      }
+
+    ]
+
+
+
+  // heroesUrl: string = "http://localhost:3000/heroes";
 
   // private datalist: Hero[] = [];
 
@@ -22,14 +59,20 @@ export class HeroService {
   //   return this.datalist;
   // }
 
-  list$: BehaviorSubject<Hero[]> = new BehaviorSubject<Hero[]>([]);
+  // list$: BehaviorSubject<Hero[]> = new BehaviorSubject<Hero[]>([]);
 
-  constructor(
-    private http: HttpClient) { }
+  constructor() {}
+    // private http: HttpClient) { }
 
-    getAll(): void {
-      this.http.get<Hero[]>(this.heroesUrl).subscribe(
-        heroes => this.list$.next(heroes)
-      );
+    // getAll(): void {
+    //   this.http.get<Hero[]>(this.heroesUrl).subscribe(
+    //     heroes => this.list$.next(heroes)
+    //   );
+    getAll(): Hero[] {
+      return (this.hero.filter(item => item));
     }
-}
+
+  }
+
+
+

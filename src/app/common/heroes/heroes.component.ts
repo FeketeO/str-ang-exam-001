@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from 'src/app/model/hero';
-import { BehaviorSubject } from 'rxjs';
+// import { BehaviorSubject } from 'rxjs';
 import { HeroService } from 'src/app/service/hero.service';
 
 
@@ -14,16 +14,18 @@ import { HeroService } from 'src/app/service/hero.service';
 
 export class HeroesComponent implements OnInit{
 
-  heroesList$: BehaviorSubject<Hero[]> = this.hService.list$;
+  // heroesList$: BehaviorSubject<Hero[]> = this.hService.list$;
+
+  hero: Hero[] = this.heroService.getAll();
 
 
   constructor(
-    private hService: HeroService)
+    private heroService: HeroService)
     {}
 
 
   ngOnInit(): void {
-    this.hService.getAll();
+    // this.hService.getAll();
   }
 }
 
