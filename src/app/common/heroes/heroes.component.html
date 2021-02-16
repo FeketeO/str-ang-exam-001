@@ -1,0 +1,27 @@
+<div class="row">
+
+  <div class="col-8 offset-2">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th >ID</th>
+          <th >Name</th>
+          <th>Superpower</th>
+          <th >Address</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr
+        *ngFor="let hero of heroesList$" >
+          <td>{{ hero.id }}</td>
+        <td>{{ hero.name }}</td>
+        <td>{{ hero.superpower }}</td>
+        <td>{{ hero.address }}</td>
+      </tr>
+
+    </tbody>
+
+    </table>
+  </div>
+</div>

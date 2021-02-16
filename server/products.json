@@ -1,0 +1,36 @@
+{
+  "heroes": [
+
+    {
+      "id": 1,
+      "name": "Infinity",
+      "superPower": "timetravel",
+      "address": "Kazakhstan"
+    },
+    {
+      "id": 2,
+      "name": "SWeathera",
+      "superPower": "changes the weather",
+      "address": "Russia"
+    },
+    {
+      "id": 3,
+      "name": "Green Leaf",
+      "superPower": "sends order to all plants",
+      "address": "Peru"
+    },
+    {
+      "id": 4,
+      "name": "Aqua",
+      "superPower": "sends order to all kind of water",
+      "address": "New Zealand"
+    },
+    {
+      "id": 5,
+      "name": "Mistral",
+      "superPower": "Orders the windr",
+      "address": "Iceland"
+    }
+
+  ]
+}
